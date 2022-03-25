@@ -1,17 +1,26 @@
 #include<iostream>
 using namespace std;
-
 void main()
 {
 	setlocale(LC_ALL, "");
 	const int n = 5; 
-	int arr[n] = { };
+	int arr[n] = {};
 	//arr[2] = 123;
-	cout << "¬ведите элементы массива (" << n << " шт):";
+	
+	int minRand;
+	int maxRand;
+	cout << "¬ведите минимально возможное случайное число: "; cin >> minRand;
+	cout << "¬ведите максимально возможное случайное число: "; cin >> maxRand;
+
+
+	
+	//cout << "¬ведите элементы массива (" << n << " шт):";
 	for (int i = 0; i < n; i++)
 	{
-		cin >> arr[i];
-}
+		//cin >> arr[i];
+		//arr[i] = rand()% 50 + 50;
+		arr[i] = rand() % (maxRand - minRand) + minRand;
+	}
 	// вывод массива на экран
 	for (int i = 0; i < n; i++)
 	{
