@@ -31,7 +31,7 @@ void main()
 
 #ifdef OCTAL
 	int decimal; // Десятичное число вводимое с клавитуры
-	const int SIZE = 32; // Максимально возможная разрядность введенного числа
+	const int SIZE = 11; // Максимально возможная разрядность введенного числа
 	double oct[SIZE] = {}; // этот массив будет хранить разряды двоичного числа
 	int i = 0; 
 	cout << "Введите десятичное число: "; cin >> decimal;
@@ -46,22 +46,29 @@ void main()
 #endif // OCTAL
 
 #ifdef HEXADECIMAL
-	int hexadecimal; // Десятичное число вводимое с клавитуры
-	const int SIZE = 32; 
-	bool bin[SIZE] = {}; 
+	int decimal; // Десятичное число вводимое с клавитуры
+	const int SIZE = 8; 
+	int hex[SIZE] = {}; 
 	//int n = 0; //фактическая разрядность числа
 	int i = 0; // или так
-	cout << "Введите десятичное число: "; cin >> hexadecimal;
-	for (; hexadecimal; i++, hexadecimal /= 16)
+	cout << "Введите десятичное число: "; cin >> decimal;
+	for (; decimal; i++, decimal /= 16)
 	{
-		bin[i] = hexadecimal % 16;
-
-		//n++;
+		hex[i] = decimal % 16;
 	}
-	//for (int i = n - 1; i >= 0; i--)
 	for (i--; i >= 0; i--)
 	{
-		cout << bin[i];
+		switch (hex[i])
+			{
+			case 10: cout << "A"; break;
+			case 11: cout << "B"; break;
+			case 12: cout << "C"; break;
+			case 13: cout << "D"; break;
+			case 14: cout << "E"; break;
+			case 15: cout << "F"; break;
+			default: cout << hex[i];
+			}
+		 
 	}
 #endif HEXADECIMAL
 
