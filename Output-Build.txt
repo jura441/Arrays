@@ -1,0 +1,6 @@
+﻿Build started...
+1>------ Build started: Project: UniqueRand2, Configuration: Debug x64 ------
+1>main.cpp
+1>C:\Users\User\source\repos\Arrays\UniqueRand2\main.cpp(8,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+1>Done building project "UniqueRand2.vcxproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

@@ -18,16 +18,32 @@ void main()
 	for (int i = 0; i < n; i++)
 	{
 		bool already_there = false;
-		for (int j = 0; j < i; j++)
-		{
-			if (arr[i] == arr[j])
-			{
-				already_there = true; // этот элемент уже встречался ранее
-				break;
-			}
-		}
-		if (already_there)continue; 
+		//for (int j = 0; j < i; j++)
+		//{
+		//	if (arr[i] == arr[j])
+		//	{
+		//		already_there = true; // этот элемент уже встречался ранее
+		//		break;
+		//	}
+		//}
+		//if (already_there)continue; 
 
+		//int count = 1; //счетчик вхождений
+		//for (int j = i + 1; j < n; j++)
+		//{
+		//	if (arr[i] == arr[j])
+		//	{
+		//		count++;
+		//	}
+		//}
+		//if (count > 1) printf("Значение %d встречается %d раз\n", arr[i], count);
+		//if (count > 1) cout << arr[i] << " встречается " << count << " раз " << endl;
+		//if (count > 0) cout << arr[i] << " повторяется " << count << " раз " << endl;
+
+
+	if (!already_there)
+	{
+		//int count = 0; //счетчик повторений
 		int count = 1; //счетчик вхождений
 		for (int j = i + 1; j < n; j++)
 		{
@@ -36,24 +52,8 @@ void main()
 				count++;
 			}
 		}
-		if (count > 1) printf("Значение %d встречается %d раз\n", arr[i], count);
-		//if (count > 1) cout << arr[i] << " встречается " << count << " раз " << endl;
+		if (count > 1) cout << arr[i] << " встречается " << count << " раз " << endl;
 		//if (count > 0) cout << arr[i] << " повторяется " << count << " раз " << endl;
-
-
-	//if (!already_there)
-	//{
-	//	//int count = 0; //счетчик повторений
-	//	int count = 1; //счетчик вхождений
-	//	for (int j = i + 1; j < n; j++)
-	//	{
-	//		if (arr[i] == arr[j])
-	//		{
-	//			count++;
-	//		}
-	//	}
-	//	if (count > 1) cout << arr[i] << " встречается " << count << " раз " << endl;
-	//	//if (count > 0) cout << arr[i] << " повторяется " << count << " раз " << endl;
-	//}
+	}
 	}
 }

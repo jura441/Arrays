@@ -8,10 +8,11 @@ void main()
 	int a = 2;
 	int b = 3;
 	cout << a << tab << b << endl;
-	int buffer = a;
-	a = b;
-	b = buffer;
-	cout << a << tab << b << endl;
+
+	//int buffer = a;
+	//a = b;
+	//b = buffer;
+	//cout << a << tab << b << endl;
 
 	const int n = 5;
 	int arr[n];
